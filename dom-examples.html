@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <title>Todo List</title>
+</head>
+<body id="body">
+  <div class="content" style="width: 90%; margin: 36px auto;">
+    <h1 class="title is-1">DOM</h1>
+
+    <p>DOM is a W3C standard for accessing documents</p>
+    <ul>
+      <li><b>Core DOM</b>: standard model for all document types</li>
+      <li><b>XML DOM</b>: standard model for XML documents</li>
+      <li><b>HTML DOM</b>: standard model for HTML documents</li>
+    </ul>
+
+    <h2>HTML DOM</h2>
+
+    <p>When a web page is loaded, the browser creates a Document Object Model of the page</p>
+    <img src="https://www.w3schools.com/js/pic_htmltree.gif" />
+    <p>The HTML DOM is a <b>standard object model</b> and <b>programming interface</b> for HTML</p>
+    <ul>
+      <li>The HTML elements as <b>objects</b>
+      </li>
+      <li>The <b>properties</b> of all HTML elements
+      </li>
+      <li>The <b>methods</b> to access all HTML elements</li>
+      <li>The <strong>events</strong> for all HTML elements</li>
+    </ul>
+
+    <h2>OK, but show me the code</h2>
+
+    <h3>JS intro</h3>
+
+    <p>There are 3 kinds of objecs in JS</p>
+    <ul>
+      <li><b>Browser's window object</b>: This is the window object in browser. It is the root object in the browser</li>
+      <li><b>JavaScript Standard Objects</b>: For example function, array, date, regex, etc.</li>
+      <li><b>Document Object</b>: This is the object window.document.</li>
+    </ul>
+
+    <h3>Document object</h3>
+
+    <p>Represents the web page.</p>
+
+    <h4>Finding HTML Elements</h4>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th style="width:50%">Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>document.getElementById(<em>id</em>)</td>
+          <td>Find an element by element id</td>
+        </tr>
+        <tr>
+          <td>document.getElementsByTagName(<em>name</em>)</td>
+          <td>Find elements by tag name</td>
+        </tr>
+        <tr>
+          <td>document.getElementsByClassName(<em>name</em>)</td>
+          <td>Find elements by class name. Returns: <b>HTMLCollection</b></td>
+        </tr>
+        <tr>
+          <td>document.querySelector(<em>selector</em>)</td>
+          <td>Find the <b>FIRST</b> element that matches the selector. Returns: <b>Node</b></td>
+        </tr>
+        <tr>
+          <td>document.querySelectorAll(<em>selector</em>)</td>
+          <td>Find <b>ALL</b> elements that matches the selector. Returns: <b>NodeList</b></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h5>Difference Between NodeList, HTMLCollection</h5>
+    <ul>
+      <li>
+        <b>NodeList</b> is a collection of nodes. Node includes any HTM/XML element, and also text content of a element, such as
+        inner text of &lt;p&gt;…&lt;/p&gt;. Is iterable and <b>has forEach</b>.
+      </li>
+      <li>
+        <b>HTMLCollection</b> is a collection of HTM/XML elements. Is iterable <b>but hasn't forEach</b>.
+      </li>
+    </ul>
+
+    <h4>Changing HTML Elements</h4>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th style="width:50%">Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><em>element</em>.innerHTML =&nbsp; <em>new html content</em></td>
+          <td>Change the inner HTML of an element</td>
+        </tr>
+        <tr>
+          <td><em>element</em>.<em>attribute = new value</em></td>
+          <td>Change the attribute value of an HTML element</td>
+        </tr>
+        <tr>
+          <td><em>element</em>.style.<em>property = new style</em></td>
+          <td>Change the style of an HTML element</td>
+        </tr>
+        <tr>
+          <th style="width:50%">Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><em>element</em>.setAttribute<em>(attribute, value)</em></td>
+          <td>Change the attribute value of an HTML element</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Adding and Deleting Elements</h4>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th style="width:50%">Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>document.createElement(<em>element</em>)</td>
+          <td>Create an HTML element</td>
+        </tr>
+        <tr>
+          <td>document.removeChild(<em>element</em>)</td>
+          <td>Remove an HTML element</td>
+        </tr>
+        <tr>
+          <td>document.appendChild(<em>element</em>)</td>
+          <td>Add an HTML element</td>
+        </tr>
+        <tr>
+          <td>document.replaceChild(<em>new, old</em>)</td>
+          <td>Replace an HTML element</td>
+        </tr>
+        <tr>
+          <td>document.write(<em>text</em>)</td>
+          <td>Write into the HTML output stream</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Bibliography</h2>
+    <ul>
+      <li><a href='https://www.w3schools.com/js/js_htmldom.asp'>https://www.w3schools.com/js/js_htmldom.asp</a></li>
+      <li><a
+          href='https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model'>https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <script type="text/javascript" src="dom-examples.js"></script>
+</body>
+</html>
